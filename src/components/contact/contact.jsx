@@ -5,15 +5,18 @@ import { FaInstagram } from "react-icons/fa"
 import { FaWhatsapp } from "react-icons/fa"
 import { useRef } from 'react'
 import emailjs from  'emailjs-com'
+import { useState } from 'react';
 
 const Contact = () => {
   const form = useRef(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_v5c4chw', 'template_46eho5r', form.current, '7nMcIxZ8wBgX2IQKz')
       .then((result) => {
           console.log(result.text);
+          setShowSuccessMessage(true);
       }, (error) => {
           console.log(error.text);
       });
@@ -24,6 +27,7 @@ const Contact = () => {
     <section id='contact'>
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
+      {showSuccessMessage && <p className="success-message">The message has been received. I will get back to you shortly.</p>}
       <div className="container contact__container">
         <div className="contact__options">
           <article className="contact__option">
@@ -50,7 +54,7 @@ const Contact = () => {
           <input type="text" name="name" id="name" placeholder='Enter your full name' required/>
           <input type="email" name="email" id="email" placeholder='Enter your email' required />
           <textarea name="message" id="message"  rows="7" placeholder='Enter your message' required ></textarea>
-          <a type='submit'className='btn btn-primary'id="contactBtn">Send Message</a>
+          <button type='submit'className='btn btn-primary'id="contactBtn">Send Message</button>
         </form>
       </div>
     </section>
