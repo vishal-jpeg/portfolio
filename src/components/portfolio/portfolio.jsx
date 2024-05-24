@@ -22,9 +22,14 @@ const data=[
     id:3,
     image:IMG3,
     title: 'Radiology Equipment Monitoring for Hospital Administration with IOT',
-    github:'https://www.skhrenterprise.com',
+    github:'https://github.com/vishal-jpeg/energy_monitoring',
   },
-
+  {
+    id:4,
+    image:IMG4,
+    title: 'Landing page with React.js Framework with the best SEO Pratices',
+    github:'https://www.skhrenterprise.com/',
+  }
 
 ]
 
@@ -44,7 +49,7 @@ const portfolio = () => {
                 <img src={image} alt={title}/>
               </div>
               <h3>{title}</h3> 
-                <a href={github} className='btn btn-primary' target='_blank'>Code/demo</a>
+                <a href={github} className='btn btn-primary' target='_blank'>Code/Demo</a>
             </article>
             )
           })
