@@ -3,6 +3,7 @@ import "./portfolio.css"
 import IMG1 from '../../assests/p1.png'
 import IMG2 from '../../assests/p2.png'
 import IMG3 from '../../assests/p3.png'
+import IMG4 from '../../assests/p4.png'
 
 const data=[
   {
@@ -21,8 +22,10 @@ const data=[
     id:3,
     image:IMG3,
     title: 'Radiology Equipment Monitoring for Hospital Administration with IOT',
-    github:'https://github.com/vishal-jpeg/energy_monitoring',
-  }
+    github:'https://www.skhrenterprise.com',
+  },
+
+
 ]
 
 
@@ -41,7 +44,7 @@ const portfolio = () => {
                 <img src={image} alt={title}/>
               </div>
               <h3>{title}</h3> 
-                <a href={github} className='btn btn-primary' target='_blank'>GitHub</a>
+                <a href={github} className='btn btn-primary' target='_blank'>Code/demo</a>
             </article>
             )
           })
