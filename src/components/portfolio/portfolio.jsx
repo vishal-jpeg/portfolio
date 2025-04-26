@@ -16,7 +16,7 @@ const data=[
     id:2,
     image:IMG2,
     title: 'Custom authentication module in Laravel framework internship project',
-    github:'https://www.github.com/',
+    github:'https://github.com/vishal-jpeg/custom-authentication',
   },
   {
     id:3,

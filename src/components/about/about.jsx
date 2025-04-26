@@ -1,6 +1,6 @@
 import React from 'react'
 import "./about.css"
-import Image from "../../assests/me_about.png"
+import Image from "../../assests/me-about.png"
 import { FaAward } from "react-icons/fa6";
 import { VscFolderLibrary } from "react-icons/vsc";
 import { GiSkills } from "react-icons/gi";
